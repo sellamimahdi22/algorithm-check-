@@ -1,0 +1,32 @@
+ALGORITHM checkpoint
+VAR
+    ch:STRING;
+    i:INTEGER;
+    l:INTEGER;
+    espace:INTEGER:=0
+    mot:INTEGER:=1;
+    voy:INTEGER:=0;
+BEGIN
+    write ("donner une chaine ");
+    read (ch);
+    // long ch 
+   write (l:= ch.length );
+//    nb mot
+FOR i FROM 1 TO l STEP step  DO
+    IF (ch[i]=' ') THEN
+        mot=mot+1;
+        espace=espace+1;
+    END_IF
+ 
+
+// nb voy
+IF (ch[i]=='a'or ch[i]='e' or ch[i]='i'or ch[i]='o' or ch[i]='u' or ch[i]='y' 
+    or ch[i]='A' or ch[i]='E' or ch[i]='I'or ch[i]='O' or ch[i]='U' or ch[i]='Y') THEN
+    voy=voy+1;
+END_IF
+END_FOR
+   write("le nbre des mots est",mot);
+    write("le nbre des espaces est",espace);
+ write("le nbre de voyelles est",voy);
+
+END
